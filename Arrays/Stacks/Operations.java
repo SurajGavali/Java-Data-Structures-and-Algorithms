@@ -1,9 +1,26 @@
 package Stacks;
 
 import Stacks.stack.StackChar;
+import Stacks.stack.StackLong;
 
-public class DelimeterMatching {
-public void check(){
+class Operations {
+
+    public void basicStackOperations(){
+        StackLong stack = new StackLong(10);
+        stack.push(30);
+        stack.push(20);
+        stack.push(70);
+        stack.push(40);
+        stack.push(90);
+
+        while(!stack.isEmpty()){
+            long value = stack.pop();
+            System.out.print(value + " ");  
+        }
+        System.out.println();
+    }
+
+    public void checkDelimeter(){
 
         String input = "a{b(c)d]e";
         StackChar stack = new StackChar(input.length());
