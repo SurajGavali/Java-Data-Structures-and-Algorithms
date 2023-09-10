@@ -10,4 +10,4 @@
 - In DelimeterMatching.java file I have written code that will check whether the given expression is correct or not using stacks functionality.
 
 <p> For example, "a{b(c)d}e" is a valid expression because opening and closing brackets matches each other sequentially. </p>
-<p> For example, "a{b(c]d}e" is a valid expression because opening and closing brackets do not matches each other sequentially. </p>
+<p> Similarly, "a{b(c]d}e" is a Invalid expression because opening and closing brackets do not matches each other sequentially. </p>
