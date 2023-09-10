@@ -1,8 +1,15 @@
 package Stacks;
 
+import Stacks.stack.StackLong;
+
 class StackApp{
+    DelimeterMatching delimeter = new DelimeterMatching();
     public static void main(String[] args){
-        Stack stack = new Stack(10);
+        StackLong stack = new StackLong(10);
+
+        DelimeterMatching delimeterMatching = new DelimeterMatching();
+        delimeterMatching.check();
+
 
         stack.push(30);
         stack.push(20);

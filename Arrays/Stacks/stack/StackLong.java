@@ -1,12 +1,12 @@
-package Stacks;
+package Stacks.stack;
 
-public class Stack {
+public class StackLong {
     
     private int maxSize;
     private long[] stackArray;
     private int top;
 
-    public Stack(int s){
+    public StackLong(int s){
 
         maxSize = s;
         stackArray = new long[maxSize];
