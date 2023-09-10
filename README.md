@@ -10,9 +10,8 @@
 - In Operations.java file I have written functions that will do some basic operations on stack and some use cases of stack.
 
 #### basicStackOperations()
-
-<p>This will add the long numbers to stack and pops the data from stack and prints it</p>
+- This will add the long numbers to stack and pops the data from stack and prints it</p>
 
 #### checkDelimeter()
-<p> For example, "a{b(c)d}e" is a valid expression because opening and closing brackets matches each other sequentially. </p>
-<p> Similarly, "a{b(c]d}e" is a Invalid expression because opening and closing brackets do not matches each other sequentially. </p>
+- For example, "a{b(c)d}e" is a valid expression because opening and closing brackets matches each other sequentially. </p>
+- Similarly, "a{b(c]d}e" is a Invalid expression because opening and closing brackets do not matches each other sequentially. </p>
