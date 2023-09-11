@@ -1,7 +1,5 @@
 package Stacks;
 
-import Stacks.stack.StackLong;
-
 class StackApp{
     Operations delimeter = new Operations();
     public static void main(String[] args){
