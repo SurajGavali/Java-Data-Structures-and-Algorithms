@@ -17,3 +17,14 @@
 - Similarly, "a{b(c]d}e" is a Invalid expression because opening and closing brackets do not matches each other sequentially.
 
 ---
+
+## Queue Using Array
+
+### Files
+- /Queues/QueueApp.java is a main file.
+- /Queues/queue/ folder you will find Queue.java file which has all the basic operations of queue.
+- In QueueOperations.java file I have written functions that will do some basic operations on queue and some use cases of queue.
+---
+## QueueOperations.java
+### basicQueueOperations()
+- This will add the numbers to queue and removes the numbers from queue and prints it.
