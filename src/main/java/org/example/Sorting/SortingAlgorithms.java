@@ -95,11 +95,74 @@ public class SortingAlgorithms {
             }
         }
 
-        //
         int temp = nums[i+1];
         nums[i+1] = nums[high];
         nums[high] = temp;
 
         return i+1;
+    }
+
+    public int[] mergeSort(int[] nums,int l,int r){
+
+        int mid = (l+r)/2;
+        if(l < r) {
+            mergeSort(nums, l, mid);
+            mergeSort(nums, mid + 1, r);
+            merge(nums, l, mid, r);
+        }
+
+        return nums;
+
+    }
+
+    public void merge(int[] nums, int l,int mid, int r){
+
+        int leftArraySize = mid - l + 1;
+        int rightArraySize = r - mid;
+
+        int[] leftArray = new int[leftArraySize];
+        int[] rightArray = new int[rightArraySize];
+
+        for(int i=0; i < leftArraySize; i++){
+
+            leftArray[i] = nums[l+i];
+
+        }
+
+        for(int i=0; i < rightArraySize; i++){
+
+            rightArray[i] = nums[mid+1+i];
+
+        }
+
+        int x = 0;
+        int y = 0;
+        int z = l;
+
+        while((x < leftArraySize && y < rightArraySize) && (x < leftArraySize && y < rightArraySize)){
+
+            if(leftArray[x] <= rightArray[y]){
+                nums[z] = leftArray[x];
+                x++;
+            } else{
+
+                nums[z] = rightArray[y];
+                y++;
+            }
+            z++;
+        }
+
+        while(x < leftArraySize){
+            nums[z] = leftArray[x];
+            x++;
+            z++;
+        }
+
+        while(y < rightArraySize){
+            nums[z] = rightArray[y];
+            y++;
+            z++;
+        }
+
     }
 }

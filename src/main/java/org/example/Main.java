@@ -27,7 +27,8 @@ public class Main {
 //        sortingAlgorithms.bubbleSort(nums);
 //        sortingAlgorithms.selectionSort(nums);
 //        sortingAlgorithms.insertionSort(nums);
-        sortingAlgorithms.quickSort(nums,0,nums.length-1);
+//        sortingAlgorithms.quickSort(nums,0,nums.length-1);
+        sortingAlgorithms.mergeSort(nums,0,nums.length-1);
 
         System.out.print("After Sorting :: ");
         for(int i : nums){
