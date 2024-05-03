@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Arrays.Arrays;
+import org.example.LinketList.LinkedList;
 import org.example.Sorting.SortingAlgorithms;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -38,5 +39,26 @@ public class Main {
 
         System.out.println("\nNumber found at index(Binary Search) :: "+arrays.binarySearch(nums,target));
         System.out.println("Number found at index(Recursive Approach) :: "+arrays.binarySearchRecursiveApproach(nums,target,0,nums.length));
+
+        System.out.println("-----------------------------------Linked List Output----------------------------------------");
+
+        LinkedList linkedList = new LinkedList();
+
+        linkedList.insertAtEnd(12);
+        linkedList.insertAtEnd(18);
+        linkedList.insertAtEnd(8);
+        linkedList.insertAtEnd(0);
+        linkedList.insertAtEnd(234);
+        linkedList.insertAtEnd(56);
+        linkedList.insertAtEnd(67);
+
+        linkedList.insertAtStart(67);
+        linkedList.insertAtStart(45);
+
+        linkedList.insertAt(4,890);
+        linkedList.insertAt(1,12345);
+        linkedList.insertAt(0,765);
+
+        linkedList.printLinkedList();
     }
 }
