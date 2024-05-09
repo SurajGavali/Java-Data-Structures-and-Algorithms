@@ -59,6 +59,11 @@ public class Main {
         linkedList.insertAt(1,12345);
         linkedList.insertAt(0,765);
 
+        linkedList.deleteFromStart();
+
+        linkedList.printLinkedList();
+        System.out.println();
+        linkedList.delete(0);
         linkedList.printLinkedList();
     }
 }
