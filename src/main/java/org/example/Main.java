@@ -65,5 +65,9 @@ public class Main {
         System.out.println();
         linkedList.delete(0);
         linkedList.printLinkedList();
+
+        linkedList.reverseLinkList();
+        System.out.println();
+        linkedList.printLinkedList();
     }
 }
