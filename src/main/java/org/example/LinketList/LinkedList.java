@@ -91,6 +91,26 @@ public class LinkedList {
         System.out.print(temp.data);
     }
 
+    public void printLinkedListRecur(Node n){
+
+        if(n == null){
+            return;
+        }
+
+        System.out.print(n.data + " ");
+        printLinkedListRecur(n.next);
+    }
+
+    public void printLinkedListRecurReverse(Node m){
+
+        if(m == null){
+            return;
+        }
+
+        printLinkedListRecurReverse(m.next);
+        System.out.print(m.data + " ");
+    }
+
     public void reverseLinkList(){
 
         Node current,prev,next;

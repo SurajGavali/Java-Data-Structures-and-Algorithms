@@ -69,5 +69,10 @@ public class Main {
         linkedList.reverseLinkList();
         System.out.println();
         linkedList.printLinkedList();
+        System.out.println();
+
+        linkedList.printLinkedListRecur(linkedList.head);
+        System.out.println();
+        linkedList.printLinkedListRecurReverse(linkedList.head);
     }
 }
