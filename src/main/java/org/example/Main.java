@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Arrays.Arrays;
+import org.example.DoublyLinkList.DoublyLinkList;
 import org.example.LinketList.LinkedList;
 import org.example.Sorting.SortingAlgorithms;
 
@@ -74,5 +75,19 @@ public class Main {
         linkedList.printLinkedListRecur(linkedList.head);
         System.out.println();
         linkedList.printLinkedListRecurReverse(linkedList.head);
+        System.out.println();
+
+        ///////////////////////////////////////////////////////////////////
+
+        DoublyLinkList doublyLinkList = new DoublyLinkList();
+
+        doublyLinkList.insertAtHead(14);
+        doublyLinkList.insertAtHead(17);
+        doublyLinkList.insertAtHead(13);
+        doublyLinkList.insertAtHead(87);
+        doublyLinkList.insertAtHead(98);
+
+        doublyLinkList.printDoublyLinkedList();
+        doublyLinkList.printDoublyLinkedListReverse();
     }
 }
