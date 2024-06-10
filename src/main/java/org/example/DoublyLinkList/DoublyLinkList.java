@@ -19,6 +19,25 @@ public class DoublyLinkList {
 
     }
 
+    public void insertAtEnd(int n){
+        Node node = new Node();
+        node.data = n;
+
+        if(head == null){
+            head = node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = node;
+        node.prev = temp;
+        node.next = null;
+
+    }
+
     public Node createNewNode(int v){
         Node n = new Node();
 

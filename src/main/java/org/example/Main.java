@@ -86,6 +86,7 @@ public class Main {
         doublyLinkList.insertAtHead(13);
         doublyLinkList.insertAtHead(87);
         doublyLinkList.insertAtHead(98);
+        doublyLinkList.insertAtEnd(45);
 
         doublyLinkList.printDoublyLinkedList();
         doublyLinkList.printDoublyLinkedListReverse();
