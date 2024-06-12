@@ -4,6 +4,7 @@ import org.example.Arrays.Arrays;
 import org.example.DoublyLinkList.DoublyLinkList;
 import org.example.LinketList.LinkedList;
 import org.example.Sorting.SortingAlgorithms;
+import org.example.Stack.Stack;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -90,5 +91,24 @@ public class Main {
 
         doublyLinkList.printDoublyLinkedList();
         doublyLinkList.printDoublyLinkedListReverse();
+
+        //////////////////////////////////////////////////////////////////////
+
+        Stack stack = new Stack();
+
+        stack.push(12);
+        stack.push(17);
+        stack.push(87);
+        stack.push(56);
+        stack.push(23);
+
+        stack.printStack();
+        System.out.println();
+
+        stack.pop();
+
+        stack.printStack();
+        System.out.println();
+
     }
 }
