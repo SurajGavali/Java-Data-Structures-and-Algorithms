@@ -1,5 +1,8 @@
 package org.example.Tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 
     public BstNode insertNode(BstNode root,int value){
@@ -83,5 +86,39 @@ public class BinaryTree {
         }
 
         return findMinRecur(root.right);
+    }
+
+    public int findHeight(BstNode root){
+
+        if(root == null){
+            return -1;
+        }
+
+        return Math.max(findHeight(root.left),findHeight(root.right)) + 1;
+    }
+
+    public void levelOrderTraversal(BstNode root){
+
+        if(root == null){
+            return;
+        }
+
+        Queue<BstNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        while(!queue.isEmpty()){
+            BstNode bstNode = queue.poll();
+            System.out.print(bstNode.data + " ");
+
+            if(bstNode.left != null){
+                queue.add(bstNode.left);
+            }
+
+            if(bstNode.right != null){
+                queue.add(bstNode.right);
+            }
+        }
+
+
     }
 }

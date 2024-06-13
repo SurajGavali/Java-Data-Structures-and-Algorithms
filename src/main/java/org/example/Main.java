@@ -124,8 +124,11 @@ public class Main {
         root = binaryTree.insertNode(root,25);
         root = binaryTree.insertNode(root,8);
         root = binaryTree.insertNode(root,12);
+        System.out.println("");
 
-        if(binaryTree.searchNode(root,21)){
+        binaryTree.levelOrderTraversal(root);
+
+        if(binaryTree.searchNode(root,25)){
             System.out.println("Found");
         } else {
             System.out.println("Not Found");
@@ -136,5 +139,8 @@ public class Main {
 
         System.out.println("Min value using recursion "+ binaryTree.findMinRecur(root));
         System.out.println("Max value using recursion "+ binaryTree.findMaxRecur(root));
+        System.out.println("Height of the tree is :: "+ binaryTree.findHeight(root));
+
+
     }
 }
