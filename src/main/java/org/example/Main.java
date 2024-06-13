@@ -5,6 +5,8 @@ import org.example.DoublyLinkList.DoublyLinkList;
 import org.example.LinketList.LinkedList;
 import org.example.Sorting.SortingAlgorithms;
 import org.example.Stack.Stack;
+import org.example.Tree.BinaryTree;
+import org.example.Tree.BstNode;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -110,5 +112,29 @@ public class Main {
         stack.printStack();
         System.out.println();
 
+        ////////////////////////////////////////////////////////////////////////
+
+        BinaryTree binaryTree = new BinaryTree();
+
+        BstNode root = null;
+
+        root = binaryTree.insertNode(root,15);
+        root = binaryTree.insertNode(root,10);
+        root = binaryTree.insertNode(root,20);
+        root = binaryTree.insertNode(root,25);
+        root = binaryTree.insertNode(root,8);
+        root = binaryTree.insertNode(root,12);
+
+        if(binaryTree.searchNode(root,21)){
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
+
+        binaryTree.findMax(root);
+        binaryTree.findMin(root);
+
+        System.out.println("Min value using recursion "+ binaryTree.findMinRecur(root));
+        System.out.println("Max value using recursion "+ binaryTree.findMaxRecur(root));
     }
 }

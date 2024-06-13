@@ -43,6 +43,6 @@ public class Stack {
         }
     }
 
-    //we can use stack for solving postfix or infix expressions
+    // we can use stack for solving postfix or infix expressions
     // and also for converting infix to postfix expression
 }
