@@ -141,6 +141,27 @@ public class Main {
         System.out.println("Max value using recursion "+ binaryTree.findMaxRecur(root));
         System.out.println("Height of the tree is :: "+ binaryTree.findHeight(root));
 
+        System.out.print("PreOrder Traversal :: ");
+        binaryTree.preOrderTraversal(root);
+        System.out.println();
+        System.out.print("Post Order Traversal :: ");
+        binaryTree.postOrderTraversal(root);
+        System.out.println();
+        System.out.print("Inorder Traversal :: ");
+        binaryTree.inOrderTraversal(root);
+
+        System.out.println();
+
+        if(binaryTree.isBST(root)){
+            System.out.println("Tree is BST");
+        } else{
+            System.out.println("Tree is Not BST");
+        }
+
+        binaryTree.preOrderTraversal(root);
+        binaryTree.deleteNodeFromTree(root,25);
+        System.out.println();
+        binaryTree.preOrderTraversal(root);
 
     }
 }

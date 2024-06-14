@@ -5,6 +5,9 @@ import java.util.Queue;
 
 public class BinaryTree {
 
+    int MAX_VALUE = Integer.MAX_VALUE;
+    int MIN_VALUE = Integer.MIN_VALUE;
+
     public BstNode insertNode(BstNode root,int value){
 
         if(root == null){
@@ -66,6 +69,19 @@ public class BinaryTree {
         System.out.println("Min value :: "+root.data);
     }
 
+    public BstNode findMinNode(BstNode root){
+
+        if(root == null){
+            System.out.println("tree has no elements!");
+        }
+
+        while(root.left != null){
+            root = root.left;
+        }
+
+        return root;
+    }
+
     public int findMinRecur(BstNode root){
 
         if(root == null){
@@ -118,7 +134,95 @@ public class BinaryTree {
                 queue.add(bstNode.right);
             }
         }
+    }
+
+    public void preOrderTraversal(BstNode root){
+
+        if (root == null){
+            return;
+        }
+        System.out.print(root.data + " ");
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    public void postOrderTraversal(BstNode root){
+
+        if (root == null){
+            return;
+        }
+
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.data + " ");
+    }
+
+    public void inOrderTraversal(BstNode root){
+
+        if (root == null){
+            return;
+        }
+
+        inOrderTraversal(root.left);
+        System.out.print(root.data + " ");
+        inOrderTraversal(root.right);
+
+    }
+
+    private boolean isBSTUtil(BstNode root,int minValue,int maxValue) {
+
+        if (root == null) {
+            return true;
+        }
+
+        if(root.data > minValue && root.data < maxValue && isBSTUtil(root.left, minValue,root.data) && isBSTUtil(root.right,root.data,maxValue)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean isBST(BstNode root){
+
+        return isBSTUtil(root,MIN_VALUE,MAX_VALUE);
+    }
+
+    public BstNode deleteNodeFromTree(BstNode root, int data){
 
 
+        if(root == null){
+            return null;
+        } else if(data < root.data){
+            root.left = deleteNodeFromTree(root.left,data);
+        } else if(data > root.data){
+            root.right = deleteNodeFromTree(root.right,data);
+        } else{
+            //case:1 No child
+            if(root.left == null && root.right == null){
+                root = null;
+            }
+            //case2: with only right child
+            else if(root.left == null){
+
+                BstNode temp = root;
+                root = root.right;
+                temp = null;
+            }
+            //case3: with only left child
+            else if(root.right == null){
+
+                BstNode temp = root;
+                root = root.left;
+                temp = null;
+            }
+            //case4: with both child
+            else{
+
+                BstNode temp = findMinNode(root.right);
+                root.data = temp.data;
+                root.right = deleteNodeFromTree(root.right,temp.data);
+            }
+
+        }
+        return root;
     }
 }
